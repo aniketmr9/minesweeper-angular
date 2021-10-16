@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <p>{{rows}} {{columns}}</p>
+  <table class="canvas" *ngFor="let a of columns; let x = index">
+    <tr>
+      <td *ngFor="let b of rows; let y = index">
+        <button class="cell" id="{{x}}{{y}}" onclick="checkCell(this.id)">
+          &nbsp;
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
